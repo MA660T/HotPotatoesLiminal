@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: 
+  companyName: Cybertato Productions
   productName: Hot Potatoes
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -160,8 +160,8 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com..Hot Potatoes
-    Standalone: com..Hot Potatoes
+    Android: com.Cybertato Productions.Hot Potatoes
+    Standalone: com.Cybertato Productions.Hot Potatoes
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 24
