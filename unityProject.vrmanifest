@@ -2,10 +2,10 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.templatelimapp.exe",
+      "app_key": "application.generated.unity.hotpotatoes.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "D:\\Users\\super\\Documents\\HotPotatoesLiminal\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\micha\\Documents\\HotPotatoesLiminal\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "Hot Potatoes [Testing]"
