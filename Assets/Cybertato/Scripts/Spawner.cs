@@ -9,10 +9,10 @@ public class Spawner : MonoBehaviour
     //TODO: Tie to GameController to handle objects to spawn
 
     //HACK: Spawn random (up to 3)
-
     #region HACK SPAWN
     public ShapeBase[] shapes;
-    private int spawnedObjs = 0;
+    [HideInInspector]
+    public int spawnedObjs = 0;
 
     private void Start()
     {
