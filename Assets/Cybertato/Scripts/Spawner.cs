@@ -28,6 +28,17 @@ public class Spawner : MonoBehaviour
             spawnedObjs++;
         }
     }
+    
+    public void SpawnGivenObject(int shapesEnumValue)
+    {
+        if (spawnedObjs < maxObjects)
+        {
+            Instantiate(shapes[shapesEnumValue],
+                new Vector3(position.x + Random.Range(0.5f, 3f), position.y, position.z + Random.Range(0.5f, 3f)), 
+                Quaternion.identity);
+            spawnedObjs++;
+        }
+    }
 
     //HACK: Spawn random (up to 3)
     #region HACK SPAWN
