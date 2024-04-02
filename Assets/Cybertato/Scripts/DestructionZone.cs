@@ -9,8 +9,12 @@ public class DestructionZone : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.GetComponent<ShapeBase>() != null)
+        var shape = other.gameObject.GetComponent<ShapeBase>();
+
+        if (shape != null)
         {
+            spawner.SpawnGivenObject(shape);
+
             Destroy(other.gameObject);
             spawner.spawnedObjs -= 1;
         }

@@ -32,20 +32,22 @@ public class Spawner : MonoBehaviour
     //HACK: Spawn random (up to 3)
     #region HACK SPAWN
 
+    int hackSpawns = 0;
+    
     private void Start()
     {
         if(testMode)
-            StartCoroutine(SpawnObject(2f));
+            StartCoroutine(HackSpawnObject(2f));
         
         position = transform.position;
     }
 
-    IEnumerator SpawnObject(float delay)
+    IEnumerator HackSpawnObject(float delay)
     {
-        while (spawnedObjs < maxObjects)
+        while (hackSpawns < maxObjects)
         {
             Instantiate(shapes[Random.Range(0, 2)], new Vector3(position.x + Random.Range(0.5f, 3f), position.y, position.z + Random.Range(0.5f, 3f)), Quaternion.identity);
-            spawnedObjs++;
+            hackSpawns++;
             
             yield return new WaitForSeconds(delay);
         }
