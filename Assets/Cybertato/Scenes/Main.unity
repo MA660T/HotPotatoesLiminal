@@ -768,14 +768,19 @@ PrefabInstance:
         type: 3}
       propertyPath: shapes.Array.data[0]
       value: 
-      objectReference: {fileID: 2444146291644861849, guid: 4a9979b6b7b849b49b1f8d2b749ed230,
+      objectReference: {fileID: 317417011566118291, guid: 18dac6ecba49ed44a825631fa2abfa55,
         type: 3}
     - target: {fileID: 6568617349453789699, guid: 92d5e6f506dbdee45af139e0f71c977a,
         type: 3}
       propertyPath: shapes.Array.data[1]
       value: 
-      objectReference: {fileID: 317417011566118291, guid: 18dac6ecba49ed44a825631fa2abfa55,
+      objectReference: {fileID: 2444146291644861849, guid: 4a9979b6b7b849b49b1f8d2b749ed230,
         type: 3}
+    - target: {fileID: 6568617349453789699, guid: 92d5e6f506dbdee45af139e0f71c977a,
+        type: 3}
+      propertyPath: testMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8935934622151784598, guid: 92d5e6f506dbdee45af139e0f71c977a,
         type: 3}
       propertyPath: m_LocalPosition.x
