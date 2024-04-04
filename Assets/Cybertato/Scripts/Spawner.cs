@@ -8,11 +8,7 @@ public class Spawner : MonoBehaviour
 {
     Vector3 position;
     public ShapeBase[] shapes;
-    
-    [HideInInspector]
-    public int spawnedObjs = 0;
-    public int maxObjects = 3;
-    
+
     [Header("Check box for random spawning")]
     public bool testMode;
     
@@ -43,6 +39,10 @@ public class Spawner : MonoBehaviour
     //HACK: Spawn random (up to 3)
     #region HACK SPAWN
 
+    [HideInInspector]
+    public int spawnedObjs = 0;
+    public int maxObjects = 3;
+    
     int hackSpawns = 0;
     
     private void Start()

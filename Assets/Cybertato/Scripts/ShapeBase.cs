@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public enum Shape
 {
@@ -14,13 +15,8 @@ public class ShapeBase : MonoBehaviour
 {
     public Shape myShape;
 
-    private void OnEnable()
+    public void Bounce(Vector2 direction)
     {
-        //Player.BounceEvent += Bounce;
-    }
-
-    void Bounce(ShapeBase obj, Vector2 direction)
-    {
-        //TODO: Use Rigidbody.AddForce
+        GetComponent<Rigidbody>().AddForce(direction);
     }
 }

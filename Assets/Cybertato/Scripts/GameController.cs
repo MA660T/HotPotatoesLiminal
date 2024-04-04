@@ -7,11 +7,11 @@ using Liminal.SDK.Core;
 public class GameController : MonoBehaviour
 {
     public int score { get; private set; }
-    public float Timer = 10.0f;
+    public float timer = 10.0f;
 
     private void Start()
     {
-        //ExperienceTimer(Timer);
+        //ExperienceTimer(timer);
     }
 
     public void AddScore()
