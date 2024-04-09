@@ -12,6 +12,7 @@ public class Spawner : MonoBehaviour
     [Header("Check box for random spawning")]
     public bool testMode;
     
+    //TODO: TWEAK RANDOMNESS OF SPAWN RANGE TO BE HITTABLE
     //TODO: Tie to GameController to handle objects to spawn
 
     public void SpawnGivenObject(ShapeBase shapeToSpawn)
@@ -19,7 +20,7 @@ public class Spawner : MonoBehaviour
         if (spawnedObjs < maxObjects)
         {
             Instantiate(shapes[(int)shapeToSpawn.myShape],
-                new Vector3(position.x + Random.Range(0.5f, 3f), position.y, position.z + Random.Range(0.5f, 3f)), 
+                new Vector3(position.x + Random.Range(0.1f, 0.5f), position.y, position.z + Random.Range(0.5f, 3f)), 
                 Quaternion.identity);
             spawnedObjs++;
         }
@@ -30,7 +31,7 @@ public class Spawner : MonoBehaviour
         if (spawnedObjs < maxObjects)
         {
             Instantiate(shapes[shapesEnumValue],
-                new Vector3(position.x + Random.Range(0.5f, 3f), position.y, position.z + Random.Range(0.5f, 3f)), 
+                new Vector3(position.x + Random.Range(0.1f, 0.5f), position.y, position.z + Random.Range(0.5f, 3f)), 
                 Quaternion.identity);
             spawnedObjs++;
         }
@@ -57,7 +58,7 @@ public class Spawner : MonoBehaviour
     {
         while (hackSpawns < maxObjects)
         {
-            Instantiate(shapes[Random.Range(0, 2)], new Vector3(position.x + Random.Range(0.5f, 3f), position.y, position.z + Random.Range(0.5f, 3f)), Quaternion.identity);
+            Instantiate(shapes[Random.Range(0, 2)], new Vector3(position.x + Random.Range(0.1f, 0.5f), position.y, position.z + Random.Range(0.1f, 0.5f)), Quaternion.identity);
             hackSpawns++;
             
             yield return new WaitForSeconds(delay);
