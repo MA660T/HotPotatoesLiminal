@@ -254,8 +254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerHands:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2036854371}
+  - {fileID: 850628578}
 --- !u!1 &295630119 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1260162969354081713, guid: 22276a8657744e04cba8ad0a2caf4195,
