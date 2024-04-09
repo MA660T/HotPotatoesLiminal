@@ -20,6 +20,6 @@ public class ShapeBase : MonoBehaviour
 
     public void Bounce(Vector3 direction)
     {
-        GetComponent<Rigidbody>().AddForce(direction * forceMultiplier);
+        GetComponent<Rigidbody>().AddForce(direction * forceMultiplier, ForceMode.Impulse);
     }
 }
