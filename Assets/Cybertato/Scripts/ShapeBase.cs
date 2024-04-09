@@ -15,7 +15,7 @@ public class ShapeBase : MonoBehaviour
 {
     public Shape myShape;
 
-    public void Bounce(Vector2 direction)
+    public void Bounce(Vector3 direction)
     {
         GetComponent<Rigidbody>().AddForce(direction);
     }

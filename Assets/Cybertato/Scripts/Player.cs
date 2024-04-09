@@ -6,22 +6,30 @@ using Random = UnityEngine.Random;
 
 public class Player : MonoBehaviour, IPlayer
 {
-    public GameObject[] PlayerHands;
+    public PlayerHand[] PlayerHands;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnEnable()
     {
-        ShapeBase incShapeBase = collision.gameObject.GetComponent<ShapeBase>();
+        foreach (PlayerHand hand in PlayerHands)
+        {
+            hand.hitEvent += HandCollisionHit;
+        }
+    }
+    
+    private void HandCollisionHit(Collider handCollider, Collision incCollision)
+    {
+        ShapeBase incShapeBase = incCollision.gameObject.GetComponent<ShapeBase>();
         
         if (incShapeBase != null)
         {
-            incShapeBase.Bounce(CalculateRandomness(incShapeBase));
+            incShapeBase.Bounce(CalculateRandomness(handCollider, incShapeBase));
         }
     }
 
-    Vector2 CalculateRandomness(ShapeBase obj)
+    Vector3 CalculateRandomness(Collider handCollider, ShapeBase obj)
     {
-        Vector2 rand = new Vector2();
-        Vector2 direction = Vector2.up;
+        Vector3 rand = new Vector3();
+        Vector3 direction = handCollider.transform.up;
        
       //Read object and determine random range to throw object off hand
       //USE: obj.myShape to read type
