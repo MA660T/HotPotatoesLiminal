@@ -10,9 +10,11 @@ public class Player : MonoBehaviour, IPlayer
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<ShapeBase>())
+        ShapeBase incShapeBase = collision.gameObject.GetComponent<ShapeBase>();
+        
+        if (incShapeBase != null)
         {
-            CalculateRandomness(collision.gameObject.GetComponent<ShapeBase>());
+            incShapeBase.Bounce(CalculateRandomness(incShapeBase));
         }
     }
 
