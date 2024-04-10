@@ -892,7 +892,7 @@ PrefabInstance:
     - target: {fileID: 6568617349453789699, guid: 92d5e6f506dbdee45af139e0f71c977a,
         type: 3}
       propertyPath: shapes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6568617349453789699, guid: 92d5e6f506dbdee45af139e0f71c977a,
         type: 3}
@@ -910,6 +910,17 @@ PrefabInstance:
         type: 3}
       propertyPath: testMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568617349453789699, guid: 92d5e6f506dbdee45af139e0f71c977a,
+        type: 3}
+      propertyPath: shapes.Array.data[2]
+      value: 
+      objectReference: {fileID: -8742092157737760840, guid: 7bcb8fd3efbe702479669d2e41c7733a,
+        type: 3}
+    - target: {fileID: 6568617349453789699, guid: 92d5e6f506dbdee45af139e0f71c977a,
+        type: 3}
+      propertyPath: maxObjects
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8935934622151784598, guid: 92d5e6f506dbdee45af139e0f71c977a,
         type: 3}

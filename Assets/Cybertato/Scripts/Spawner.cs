@@ -13,7 +13,7 @@ public class Spawner : MonoBehaviour
     
     private Vector3 position;
     [Header("SETUP VARIABLES")]
-    [Tooltip("Fill in all shapes to spawn")]
+    [Tooltip("Fill in all shapes to spawn, MUST MATCH SHAPE ENUM")]
     public ShapeBase[] shapes;
 
     //TODO: TWEAK RANDOMNESS OF SPAWN RANGE TO BE HITTABLE
@@ -64,7 +64,7 @@ public class Spawner : MonoBehaviour
     {
         while (hackSpawns < maxObjects)
         {
-            Instantiate(shapes[Random.Range(0, 2)], new Vector3(position.x + Random.Range(0.1f, 0.5f), position.y, position.z + Random.Range(0.1f, 0.5f)), Quaternion.identity);
+            Instantiate(shapes[Random.Range(0, 3)], new Vector3(position.x + Random.Range(0.1f, 0.5f), position.y, position.z + Random.Range(0.1f, 0.5f)), Quaternion.identity);
             hackSpawns++;
             
             yield return new WaitForSeconds(delay);
