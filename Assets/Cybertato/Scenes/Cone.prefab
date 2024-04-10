@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myShape: 2
-  forceMultiplier: 1
+  forceMultiplier: 0.5
 --- !u!75 &-410377000611119225
 ConstantForce:
   m_ObjectHideFlags: 0

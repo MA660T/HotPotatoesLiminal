@@ -122,4 +122,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myShape: 1
-  forceMultiplier: 1
+  forceMultiplier: 0.5
