@@ -299,7 +299,7 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: 10b62c53540c48e42a1850be02705038, type: 2}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Height: 5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -989,6 +989,26 @@ PrefabInstance:
         type: 3}
       propertyPath: maxObjects
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568617349453789699, guid: 92d5e6f506dbdee45af139e0f71c977a,
+        type: 3}
+      propertyPath: upperSpawnXLimit
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568617349453789699, guid: 92d5e6f506dbdee45af139e0f71c977a,
+        type: 3}
+      propertyPath: lowerSpawnZLimit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568617349453789699, guid: 92d5e6f506dbdee45af139e0f71c977a,
+        type: 3}
+      propertyPath: upperSpawnZLimit
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568617349453789699, guid: 92d5e6f506dbdee45af139e0f71c977a,
+        type: 3}
+      propertyPath: lowerSpawnXLimit
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8935934622151784598, guid: 92d5e6f506dbdee45af139e0f71c977a,
         type: 3}

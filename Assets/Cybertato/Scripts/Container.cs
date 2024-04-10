@@ -11,7 +11,7 @@ public class Container : MonoBehaviour
 
         if (shape != null)
         {
-            shape.gameObject.GetComponent<Rigidbody>().velocity *= -1f;
+            shape.gameObject.GetComponent<Rigidbody>().velocity *= -0.5f;
         }
     }
 }
