@@ -16,6 +16,17 @@ public class Spawner : MonoBehaviour
     [Tooltip("Fill in all shapes to spawn, MUST MATCH SHAPE ENUM")]
     public ShapeBase[] shapes;
 
+    [Header("ADJUSTABLE VARIABLES")]
+    [Tooltip("Maximum X value to spawn")]
+    public float upperSpawnXLimit = 0.5f;
+    [Tooltip("Minimum X value to spawn")]
+    public float lowerSpawnXLimit = 0.1f;
+
+    [Tooltip("Maximum Z value to spawn")]
+    public float upperSpawnZLimit = 3f;
+    [Tooltip("Minimum Z value to spawn")]
+    public float lowerSpawnZLimit = 0.5f;
+
     //TODO: TWEAK RANDOMNESS OF SPAWN RANGE TO BE HITTABLE
     //TODO: Tie to GameController to handle objects to spawn
 
@@ -32,7 +43,7 @@ public class Spawner : MonoBehaviour
         if (spawnedObjs < maxObjs)
         {
             Instantiate(shapes[(int)shapeToSpawn.myShape],
-                new Vector3(position.x + Random.Range(0.1f, 0.5f), position.y, position.z + Random.Range(0.5f, 3f)), 
+                new Vector3(position.x + Random.Range(lowerSpawnXLimit, upperSpawnXLimit), position.y, position.z + Random.Range(lowerSpawnZLimit, upperSpawnZLimit)), 
                 Quaternion.identity);
             spawnedObjs++;
         }
@@ -43,7 +54,7 @@ public class Spawner : MonoBehaviour
         if (spawnedObjs < maxObjs)
         {
             Instantiate(shapes[shapesEnumValue],
-                new Vector3(position.x + Random.Range(0.1f, 0.5f), position.y, position.z + Random.Range(0.5f, 3f)), 
+                new Vector3(position.x + Random.Range(lowerSpawnXLimit, upperSpawnXLimit), position.y, position.z + Random.Range(lowerSpawnZLimit, upperSpawnZLimit)), 
                 Quaternion.identity);
             spawnedObjs++;
         }
@@ -64,7 +75,9 @@ public class Spawner : MonoBehaviour
     {
         while (hackSpawns < maxObjects)
         {
-            Instantiate(shapes[Random.Range(0, 3)], new Vector3(position.x + Random.Range(0.1f, 0.5f), position.y, position.z + Random.Range(0.1f, 0.5f)), Quaternion.identity);
+            Instantiate(shapes[Random.Range(0, 3)],
+                new Vector3(position.x + Random.Range(lowerSpawnXLimit, upperSpawnXLimit), position.y, position.z + Random.Range(lowerSpawnXLimit, upperSpawnXLimit)),
+                Quaternion.identity);
             hackSpawns++;
             
             yield return new WaitForSeconds(delay);
