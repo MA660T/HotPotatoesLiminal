@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 76057509486072146}
   - component: {fileID: 76057509486072147}
   - component: {fileID: 317417011566118291}
+  - component: {fileID: -215964061704373934}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -103,8 +104,8 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 10
-  m_UseGravity: 1
+  m_AngularDrag: 0
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -123,3 +124,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myShape: 0
   forceMultiplier: 1
+--- !u!75 &-215964061704373934
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76057509486072144}
+  m_Enabled: 1
+  m_Force: {x: 0, y: -5, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}

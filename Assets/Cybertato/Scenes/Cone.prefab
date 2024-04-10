@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8922784927217654242}
   - component: {fileID: 7041844705390510474}
   - component: {fileID: -8742092157737760840}
+  - component: {fileID: -410377000611119225}
   m_Layer: 0
   m_Name: Cone
   m_TagString: Untagged
@@ -104,8 +105,8 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 5
-  m_UseGravity: 1
+  m_AngularDrag: 0
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -124,3 +125,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myShape: 2
   forceMultiplier: 1
+--- !u!75 &-410377000611119225
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3063464139362798382}
+  m_Enabled: 1
+  m_Force: {x: 0, y: -7.5, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}

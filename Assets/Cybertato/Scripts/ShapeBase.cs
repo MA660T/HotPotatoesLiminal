@@ -21,7 +21,7 @@ public class ShapeBase : MonoBehaviour
     [Header("FREELY ADJUSTABLE VARIABLES")]
     [Tooltip("Adjust as needed for fun bounce")]
     public float forceMultiplier = 1;
-
+    
     public void Bounce(Vector3 direction)
     {
         GetComponent<Rigidbody>().AddForce(direction * forceMultiplier, ForceMode.Impulse);
