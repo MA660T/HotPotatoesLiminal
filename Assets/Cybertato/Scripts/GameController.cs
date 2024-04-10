@@ -7,6 +7,9 @@ using Liminal.SDK.Core;
 public class GameController : MonoBehaviour
 {
     public int score { get; private set; }
+    
+    [Header("ADJUSTABLE VARIABLES")]
+    [Tooltip("Length of time the experience will go for")]
     public float timer = 10.0f;
 
     private void Start()

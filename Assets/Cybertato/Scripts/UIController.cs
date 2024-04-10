@@ -9,12 +9,14 @@ using UnityEngine;
 /// </summary>
 public class UIController : MonoBehaviour
 {
-    private GameController gm;
+    [Header("SETUP VARIABLES")]
+    [Tooltip("Only Instance of \"GameController\" in scene ")]
+    public GameController gm;
     
     // Start is called before the first frame update
     void Start()
     {
-        gm = FindObjectOfType<GameController>();
+        
     }
 
     // Update is called once per frame

@@ -6,18 +6,30 @@ using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
-    Vector3 position;
+    [HideInInspector]
+    public int spawnedObjs = 0;
+    [HideInInspector]
+    public int maxObjs = Int32.MaxValue;
+    
+    private Vector3 position;
+    [Header("SETUP VARIABLES")]
+    [Tooltip("Fill in all shapes to spawn")]
     public ShapeBase[] shapes;
 
-    [Header("Check box for random spawning")]
-    public bool testMode;
-    
     //TODO: TWEAK RANDOMNESS OF SPAWN RANGE TO BE HITTABLE
     //TODO: Tie to GameController to handle objects to spawn
 
+    private void Start()
+    {
+        if(testMode)
+            StartCoroutine(HackSpawnObject(2f));
+        
+        position = transform.position;
+    }
+    
     public void SpawnGivenObject(ShapeBase shapeToSpawn)
     {
-        if (spawnedObjs < maxObjects)
+        if (spawnedObjs < maxObjs)
         {
             Instantiate(shapes[(int)shapeToSpawn.myShape],
                 new Vector3(position.x + Random.Range(0.1f, 0.5f), position.y, position.z + Random.Range(0.5f, 3f)), 
@@ -28,7 +40,7 @@ public class Spawner : MonoBehaviour
     
     public void SpawnGivenObject(int shapesEnumValue)
     {
-        if (spawnedObjs < maxObjects)
+        if (spawnedObjs < maxObjs)
         {
             Instantiate(shapes[shapesEnumValue],
                 new Vector3(position.x + Random.Range(0.1f, 0.5f), position.y, position.z + Random.Range(0.5f, 3f)), 
@@ -37,22 +49,16 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    //HACK: Spawn random (up to 3)
+    //HACK: Spawn random
     #region HACK SPAWN
-
-    [HideInInspector]
-    public int spawnedObjs = 0;
+    
+    [Header("AUTOMATIC SPAWNING FOR TESTING ONLY")]
+    [Tooltip("Check box for random spawns")]
+    public bool testMode;
+    [Tooltip("Max number of objects, ONLY FOR TEST MODE")]
     public int maxObjects = 3;
     
-    int hackSpawns = 0;
-    
-    private void Start()
-    {
-        if(testMode)
-            StartCoroutine(HackSpawnObject(2f));
-        
-        position = transform.position;
-    }
+    private int hackSpawns = 0;
 
     IEnumerator HackSpawnObject(float delay)
     {

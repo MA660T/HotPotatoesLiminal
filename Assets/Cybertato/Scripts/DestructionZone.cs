@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class DestructionZone : MonoBehaviour
 {
+    [Header("SETUP VARIABLES")]
+    [Tooltip("The spawner in the level")]
     public Spawner spawner;
 
     private void OnCollisionEnter(Collision other)
@@ -16,7 +18,7 @@ public class DestructionZone : MonoBehaviour
             spawner.SpawnGivenObject(shape);
 
             Destroy(other.gameObject);
-            spawner.spawnedObjs -= 1;
+            spawner.spawnedObjs --;
         }
     }
 }

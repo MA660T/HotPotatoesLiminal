@@ -6,6 +6,8 @@ using Random = UnityEngine.Random;
 
 public class Player : MonoBehaviour, IPlayer
 {
+    [Header("SETUP VARIABLES")]
+    [Tooltip("Must include all \"PlayerHand\" instances")]
     public PlayerHand[] PlayerHands;
 
     private void OnEnable()
@@ -48,7 +50,7 @@ public class Player : MonoBehaviour, IPlayer
               rand.x = Random.Range(0f, 0.2f);
               rand.y = Random.Range(0f, 0.2f);
               break;
-          case Shape.Bouncer:
+          case Shape.Pyramid:
               rand.x = Random.Range(0f, 1f);
               rand.y = Random.Range(0f, 1f);
               break;
