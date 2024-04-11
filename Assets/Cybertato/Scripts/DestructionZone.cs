@@ -8,6 +8,12 @@ public class DestructionZone : MonoBehaviour
     [Header("SETUP VARIABLES")]
     [Tooltip("The spawner in the level")]
     public Spawner spawner;
+    AudioSource aud;
+
+    private void Start()
+    {
+        aud = GetComponent<AudioSource>();
+    }
 
     private void OnCollisionEnter(Collision other)
     {
@@ -16,7 +22,7 @@ public class DestructionZone : MonoBehaviour
         if (shape != null)
         {
             spawner.SpawnGivenObject(shape);
-
+            aud.Play();
             Destroy(other.gameObject);
             spawner.spawnedObjs --;
         }
