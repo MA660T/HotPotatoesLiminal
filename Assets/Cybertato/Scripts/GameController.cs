@@ -7,6 +7,8 @@ using Liminal.SDK.Core;
 public class GameController : MonoBehaviour
 {
     public int score { get; private set; }
+    public int combo { get; private set; }
+    private int comboIncrement;
     
     [Header("ADJUSTABLE VARIABLES")]
     [Tooltip("Length of time the experience will go for")]
@@ -21,8 +23,27 @@ public class GameController : MonoBehaviour
     {
         score++;
     }
-    
-    private IEnumerator ExperienceTimer(float timer) {
+
+    public void ChangeCombo(bool reset)
+    {
+        if (reset)
+        {
+            combo = 0;
+            comboIncrement = 0;
+        }
+        else
+        {
+            comboIncrement++;
+            if (comboIncrement >= 5)
+            {
+                combo++;
+                comboIncrement = 0;
+            }
+        }
+    }
+
+    private IEnumerator ExperienceTimer(float timer)
+    {
 
         yield return new WaitForSeconds(timer);
         GoodWayToEnd();
@@ -56,9 +77,6 @@ public class GameController : MonoBehaviour
 
         }
     }
-
-    
-
 }
     
 
