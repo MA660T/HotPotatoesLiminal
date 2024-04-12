@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour
     [Tooltip("Length of time the experience will go for")]
     public float timer = 10.0f;
 
+    public DifficultyStage[] experienceStages;
+
     private void Start()
     {
         //ExperienceTimer(timer);
@@ -41,6 +43,7 @@ public class GameController : MonoBehaviour
         }
     }
 
+    //Use to divide into 3, pertaining to each difficulty where we add new objects
     private IEnumerator ExperienceTimer(float timer)
     {
 
