@@ -27,9 +27,6 @@ public class Spawner : MonoBehaviour
     [Tooltip("Minimum Z value to spawn")]
     public float lowerSpawnZLimit = 0.5f;
 
-    //TODO: TWEAK RANDOMNESS OF SPAWN RANGE TO BE HITTABLE
-    //TODO: Tie to GameController to handle objects to spawn
-
     private void Start()
     {
         if(testMode)

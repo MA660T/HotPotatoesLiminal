@@ -9,21 +9,29 @@ public class GameController : MonoBehaviour
     public int score { get; private set; }
     public int scoreMultiplier { get; private set; }
     private int comboCounter;
+
+    [Header("SETUP VARIABLES")]
+    public Spawner spawner;
     
     [Header("ADJUSTABLE VARIABLES")]
     [Tooltip("Length of time the experience will go for")]
     public float timer = 10.0f;
 
     public DifficultyStage[] experienceStages;
+    private DifficultyStage currentStage;
 
     private void Start()
     {
-        //ExperienceTimer(timer);
+        StartCoroutine(ExperienceTimer(timer));
+        StartCoroutine(BeginStage(timer));
     }
 
     public void AddScore()
     {
         score += scoreMultiplier;
+        
+        if(score >= currentStage.bonusScore)
+            spawner.SpawnGivenObject(currentStage.bonusShape);
     }
 
     public void ChangeCombo(bool reset)
@@ -43,11 +51,36 @@ public class GameController : MonoBehaviour
         }
     }
 
-    //Use to divide into 3, pertaining to each difficulty where we add new objects
-    private IEnumerator ExperienceTimer(float timer)
+    IEnumerator BeginStage(float delay)
     {
+        //start at stages[0]
+        //read number of shapes to spawn
+        //set spawner limit to 1+ that to allow for bonus shape
+        //spawn obj1
+        //wait for wait for (1/3 total time)/number of objects
+        //spawn obj2
+        //wait for remaining time
 
-        yield return new WaitForSeconds(timer);
+        //Should be generic enough to work for each stage and varying array sizes.....
+        foreach (DifficultyStage stage in experienceStages)
+        {
+            currentStage = stage;
+
+            delay /= stage.mainShapes.Length;
+            spawner.maxObjs = stage.mainShapes.Length + 1;
+
+            foreach (ShapeBase shape in stage.mainShapes)
+            {
+                spawner.SpawnGivenObject(shape);
+                yield return new WaitForSeconds(delay);
+            }
+        }
+    }
+    
+    private IEnumerator ExperienceTimer(float delay)
+    {
+        
+        yield return new WaitForSeconds(delay);
         GoodWayToEnd();
     
     }
