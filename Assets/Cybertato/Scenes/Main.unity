@@ -695,7 +695,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c929c34c29342545b64e06759edc60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 156
+  experienceStages:
+  - mainShapes:
+    - {fileID: 317417011566118291, guid: 18dac6ecba49ed44a825631fa2abfa55, type: 3}
+    - {fileID: 317417011566118291, guid: 18dac6ecba49ed44a825631fa2abfa55, type: 3}
+    bonusShape: {fileID: 317417011566118291, guid: 18dac6ecba49ed44a825631fa2abfa55,
+      type: 3}
+    bonusScore: 55
+  - mainShapes:
+    - {fileID: 2444146291644861849, guid: 4a9979b6b7b849b49b1f8d2b749ed230, type: 3}
+    bonusShape: {fileID: 317417011566118291, guid: 18dac6ecba49ed44a825631fa2abfa55,
+      type: 3}
+    bonusScore: 125
+  - mainShapes:
+    - {fileID: 2444146291644861849, guid: 4a9979b6b7b849b49b1f8d2b749ed230, type: 3}
+    bonusShape: {fileID: -8742092157737760840, guid: 7bcb8fd3efbe702479669d2e41c7733a,
+      type: 3}
+    bonusScore: 200
 --- !u!1 &1445691398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,7 +1411,7 @@ PrefabInstance:
     - target: {fileID: 6568617349453789699, guid: 92d5e6f506dbdee45af139e0f71c977a,
         type: 3}
       propertyPath: testMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6568617349453789699, guid: 92d5e6f506dbdee45af139e0f71c977a,
         type: 3}
