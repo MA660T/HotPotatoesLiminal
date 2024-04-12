@@ -7,8 +7,8 @@ using Liminal.SDK.Core;
 public class GameController : MonoBehaviour
 {
     public int score { get; private set; }
-    public int combo { get; private set; }
-    private int comboIncrement;
+    public int scoreMultiplier { get; private set; }
+    private int comboCounter;
     
     [Header("ADJUSTABLE VARIABLES")]
     [Tooltip("Length of time the experience will go for")]
@@ -21,23 +21,22 @@ public class GameController : MonoBehaviour
 
     public void AddScore()
     {
-        score++;
+        score += scoreMultiplier;
     }
 
     public void ChangeCombo(bool reset)
     {
         if (reset)
         {
-            combo = 0;
-            comboIncrement = 0;
+            scoreMultiplier = 1;
+            comboCounter = 0;
         }
         else
         {
-            comboIncrement++;
-            if (comboIncrement >= 5)
+            comboCounter++;
+            if (comboCounter%5 == 0)
             {
-                combo++;
-                comboIncrement = 0;
+                scoreMultiplier++;
             }
         }
     }
