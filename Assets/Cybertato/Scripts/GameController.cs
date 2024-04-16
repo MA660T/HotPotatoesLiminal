@@ -1,11 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Liminal.Core.Fader;
 using Liminal.SDK.Core;
+using Unity.Collections;
 
 public class GameController : MonoBehaviour
 {
+    #region Editor Debug
+    
+    [HideInInspector]
+    public float waitTime;
+
+    private void Update()
+    {
+        waitTime -= Time.deltaTime;
+        Mathf.Round(waitTime);
+    }
+    #endregion
+
     public int score { get; private set; }
     public int scoreMultiplier { get; private set; }
     private int comboCounter;
@@ -71,6 +85,8 @@ public class GameController : MonoBehaviour
 
             foreach (ShapeBase shape in stage.mainShapes)
             {
+                waitTime = delay;
+                
                 spawner.SpawnGivenObject(shape);
                 yield return new WaitForSeconds(delay);
             }
