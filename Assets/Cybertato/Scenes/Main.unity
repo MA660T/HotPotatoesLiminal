@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c929c34c29342545b64e06759edc60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
+  spawner: {fileID: 1541175653}
   timer: 156
   experienceStages:
   - mainShapes:
