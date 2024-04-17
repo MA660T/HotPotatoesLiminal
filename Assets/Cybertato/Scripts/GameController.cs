@@ -42,27 +42,22 @@ public class GameController : MonoBehaviour
 
     public void AddScore()
     {
+        comboCounter++;
+        if (comboCounter%5 == 0)
+        {
+            scoreMultiplier++;
+        }
+        
         score += scoreMultiplier;
         
         if(score >= currentStage.bonusScore)
             spawner.SpawnGivenObject(currentStage.bonusShape);
     }
 
-    public void ChangeCombo(bool reset)
+    public void ResetCombo()
     {
-        if (reset)
-        {
-            scoreMultiplier = 1;
-            comboCounter = 0;
-        }
-        else
-        {
-            comboCounter++;
-            if (comboCounter%5 == 0)
-            {
-                scoreMultiplier++;
-            }
-        }
+        scoreMultiplier = 1;
+        comboCounter = 0;
     }
 
     IEnumerator BeginStage(float delay)

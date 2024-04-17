@@ -9,10 +9,12 @@ public class DestructionZone : MonoBehaviour
     [Tooltip("The spawner in the level")]
     public Spawner spawner;
     AudioSource aud;
+    private GameController gm;
 
     private void Start()
     {
         aud = GetComponent<AudioSource>();
+        gm = FindObjectOfType<GameController>();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -25,6 +27,8 @@ public class DestructionZone : MonoBehaviour
             aud.Play();
             Destroy(other.gameObject);
             spawner.spawnedObjs --;
+            
+            gm.ResetCombo();
         }
     }
 }

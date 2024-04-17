@@ -10,6 +10,13 @@ public class Player : MonoBehaviour, IPlayer
     [Tooltip("Must include all \"PlayerHand\" instances")]
     public PlayerHand[] PlayerHands;
 
+    private GameController gm;
+
+    private void Start()
+    {
+        gm = FindObjectOfType<GameController>();
+    }
+
     private void OnEnable()
     {
         foreach (PlayerHand hand in PlayerHands)
@@ -25,6 +32,7 @@ public class Player : MonoBehaviour, IPlayer
         if (incShapeBase != null)
         {
             incShapeBase.Bounce(CalculateRandomness(handCollider, incShapeBase));
+            gm.AddScore();
         }
     }
 
