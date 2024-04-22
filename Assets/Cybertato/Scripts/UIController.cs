@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 /// <summary>
 /// This script will be attached to an object on the player hand
@@ -12,11 +13,13 @@ public class UIController : MonoBehaviour
     [Header("SETUP VARIABLES")]
     [Tooltip("Only Instance of \"GameController\" in scene ")]
     public GameController gm;
+    private TMP_Text ScoreText;
+
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        ScoreText = GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
