@@ -25,6 +25,6 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        ScoreText.SetText("Score: " + gm.score + "\n Multiplier: " + gm.scoreMultiplier);
     }
 }
