@@ -33,6 +33,7 @@ public class Player : MonoBehaviour, IPlayer
         {
             incShapeBase.Bounce(CalculateRandomness(handCollider, incShapeBase));
             gm.AddScore();
+            Debug.Log("Bounced and score added");
         }
     }
 
