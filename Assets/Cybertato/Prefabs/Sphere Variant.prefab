@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 76057509486072144, guid: 18dac6ecba49ed44a825631fa2abfa55,
         type: 3}
       propertyPath: m_Name
-      value: Sphere
+      value: Sphere Variant
       objectReference: {fileID: 0}
     - target: {fileID: 76057509486072151, guid: 18dac6ecba49ed44a825631fa2abfa55,
         type: 3}
