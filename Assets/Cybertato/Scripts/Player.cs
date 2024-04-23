@@ -24,7 +24,7 @@ public class Player : MonoBehaviour, IPlayer
             hand.hitEvent += HandCollisionHit;
         }
     }
-    
+
     private void HandCollisionHit(Collider handCollider, Collision incCollision)
     {
         ShapeBase incShapeBase = incCollision.gameObject.GetComponent<ShapeBase>();

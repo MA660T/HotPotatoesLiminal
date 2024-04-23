@@ -47,6 +47,8 @@ public class GameControllerEditor : Editor
 
         EditorGUI.BeginDisabledGroup(true);
         EditorGUILayout.FloatField("Wait Time", script.waitTime);
+        EditorGUILayout.IntField("Score", script.score);
+        EditorGUILayout.IntField("Multiplier", script.scoreMultiplier);
         EditorGUI.EndDisabledGroup();
 
         DrawDefaultInspector();
