@@ -12,6 +12,7 @@ public class AudioLoudnessTester : MonoBehaviour
     public float sizeFactor = 1;
     public float minSize = 0;
     public float MaxSize = 500;
+    private int RandomPick;
 
     Color Pink = new Color(255, 0, 193, 1);
     Color Purple = new Color(150, 0, 255, 1);
@@ -60,7 +61,7 @@ public class AudioLoudnessTester : MonoBehaviour
 
     private void SetColor()
     {
-        int RandomPick = Random.Range(0,RandomColor.Length);
+        RandomPick = Random.Range(0,RandomColor.Length);
         Renderre.material.SetColor("_Color", RandomColor[RandomPick]);
     }
 
