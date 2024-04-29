@@ -12,23 +12,29 @@ public class AudioLoudnessTester : MonoBehaviour
     public float sizeFactor = 1;
     public float minSize = 0;
     public float MaxSize = 500;
-    private Color Newcolor;
-    private float Red;
-    private float green;
-    private float blue;
+
+    Color Pink = new Color(255, 0, 193, 1);
+    Color Purple = new Color(150, 0, 255, 1);
+    Color DBlue = new Color(73, 0, 255, 1);
+    Color Mblue = new Color(0, 184, 255, 1);
+    Color Lblue = new Color(0, 255, 149, 1);
+    Color salmon = new Color(255, 2165, 151, 1);
+    Color coral = new Color(255, 174, 151, 1);
+    Color orange = new Color(255, 197, 108, 1);
+    Color yellow = new Color(255, 299, 86, 1);
+
+    private Color[] RandomColor;
+
     private Renderer Renderre;
     private float RandomMultiplier;
+
     private void Awake()
     {
         clipSampleData = new float[SampleDataLenth];
         Renderre = Cobject.GetComponent<Renderer>();
         RandomMultiplier = Random.Range(1f, 3f);
-
-    }
-    private void Start()
-    {
+        RandomColor = new Color[] { Pink, Purple, DBlue, Mblue, Lblue,salmon,coral,orange,yellow };
         SetColor();
-
     }
 
     private void Update()
@@ -54,11 +60,8 @@ public class AudioLoudnessTester : MonoBehaviour
 
     private void SetColor()
     {
-        Red = Random.Range(0f, 1f);
-        green = Random.Range(0f, 1f);
-        blue = Random.Range(0f, 1f);
-        Newcolor = new Color(Red, green, blue);
-        Renderre.material.SetColor("_Color", Newcolor);
+        int RandomPick = Random.Range(0,RandomColor.Length);
+        Renderre.material.SetColor("_Color", RandomColor[RandomPick]);
     }
 
 }
