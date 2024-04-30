@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class AudioLoudnessTester : MonoBehaviour
 {
     public AudioSource AudioSource;
-    public float UpdateStep = 0.01f;
+    public float UpdateStep = 0.001f;
     public int SampleDataLenth = 1024;
     private float currentUpdateTime = 0f;
     public float clipLoundness;
