@@ -27,8 +27,6 @@ public class PlayerHand : MonoBehaviour
             SFX.Play();
             StartCoroutine(Haptics(1, 1, 0.3f, false, true));
         }
-
-
         else if (myCollider.name == "SHandCollision")
         {
             StartCoroutine(Haptics(1, 1, 0.3f, true, false));
@@ -36,6 +34,7 @@ public class PlayerHand : MonoBehaviour
             StartCoroutine(Haptics(1, 1, 0.3f, false, true));
         }
 
+        hitEvent?.Invoke(myCollider, collision);
     }
 
     IEnumerator Haptics(float frequency, float amplitude, float duration, bool rightHand, bool leftHand)
