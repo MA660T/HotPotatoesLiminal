@@ -41,6 +41,7 @@ public class Player : MonoBehaviour, IPlayer
     {
         Vector3 rand = new Vector3();
         Vector3 direction = handCollider.transform.up.normalized;
+        //Vector3 direction = -obj.gameObject.GetComponent<Rigidbody>().velocity;
        
       //Read object and determine random range to throw object off hand
       //USE: obj.myShape to read type
