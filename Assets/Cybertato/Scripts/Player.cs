@@ -40,7 +40,7 @@ public class Player : MonoBehaviour, IPlayer
     Vector3 CalculateRandomness(Collider handCollider, ShapeBase obj)
     {
         Vector3 rand = new Vector3();
-        Vector3 direction = handCollider.transform.up;
+        Vector3 direction = handCollider.transform.up.normalized;
        
       //Read object and determine random range to throw object off hand
       //USE: obj.myShape to read type
