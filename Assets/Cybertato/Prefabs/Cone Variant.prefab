@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: 3063464139362798382, guid: 7bcb8fd3efbe702479669d2e41c7733a,
         type: 3}
       propertyPath: m_Name
-      value: Cone
+      value: Cone Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: -8742092157737760840, guid: 7bcb8fd3efbe702479669d2e41c7733a,
+        type: 3}
+      propertyPath: forceMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866072938990932635, guid: 7bcb8fd3efbe702479669d2e41c7733a,
         type: 3}

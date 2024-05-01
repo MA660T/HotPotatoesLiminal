@@ -92,5 +92,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.1094965
       objectReference: {fileID: 0}
+    - target: {fileID: 317417011566118291, guid: 18dac6ecba49ed44a825631fa2abfa55,
+        type: 3}
+      propertyPath: forceMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18dac6ecba49ed44a825631fa2abfa55, type: 3}

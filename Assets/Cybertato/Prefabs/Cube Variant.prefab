@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: 865302466783081050, guid: 4a9979b6b7b849b49b1f8d2b749ed230,
         type: 3}
       propertyPath: m_Name
-      value: Cube
+      value: Cube Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444146291644861849, guid: 4a9979b6b7b849b49b1f8d2b749ed230,
+        type: 3}
+      propertyPath: forceMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 865302466783081047, guid: 4a9979b6b7b849b49b1f8d2b749ed230,
         type: 3}
@@ -82,6 +87,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 865302466783081049, guid: 4a9979b6b7b849b49b1f8d2b749ed230,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4e7cc3a19353bfa4b897412007214118, type: 2}
     - target: {fileID: 865302466783081048, guid: 4a9979b6b7b849b49b1f8d2b749ed230,
         type: 3}
       propertyPath: m_Size.x
@@ -97,10 +107,5 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0.220259
       objectReference: {fileID: 0}
-    - target: {fileID: 865302466783081049, guid: 4a9979b6b7b849b49b1f8d2b749ed230,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 4e7cc3a19353bfa4b897412007214118, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a9979b6b7b849b49b1f8d2b749ed230, type: 3}
