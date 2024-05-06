@@ -107,5 +107,10 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0.220259
       objectReference: {fileID: 0}
+    - target: {fileID: 865302466783081051, guid: 4a9979b6b7b849b49b1f8d2b749ed230,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a9979b6b7b849b49b1f8d2b749ed230, type: 3}

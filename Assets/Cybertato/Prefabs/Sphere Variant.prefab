@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 317417011566118291, guid: 18dac6ecba49ed44a825631fa2abfa55,
+        type: 3}
+      propertyPath: forceMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 76057509486072151, guid: 18dac6ecba49ed44a825631fa2abfa55,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -92,10 +97,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.1094965
       objectReference: {fileID: 0}
-    - target: {fileID: 317417011566118291, guid: 18dac6ecba49ed44a825631fa2abfa55,
+    - target: {fileID: 76057509486072147, guid: 18dac6ecba49ed44a825631fa2abfa55,
         type: 3}
-      propertyPath: forceMultiplier
-      value: 1
+      propertyPath: m_Interpolate
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18dac6ecba49ed44a825631fa2abfa55, type: 3}
