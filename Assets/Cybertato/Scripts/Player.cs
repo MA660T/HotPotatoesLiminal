@@ -40,7 +40,7 @@ public class Player : MonoBehaviour, IPlayer
     Vector3 CalculateRandomness(Collider handCollider, ShapeBase obj)
     {
         Vector3 rand = new Vector3();
-        Vector3 direction = handCollider.transform.up.normalized;
+        Vector3 direction = -handCollider.transform.forward.normalized;
         //Vector3 direction = -obj.gameObject.GetComponent<Rigidbody>().velocity;
        
       //Read object and determine random range to throw object off hand
@@ -53,15 +53,15 @@ public class Player : MonoBehaviour, IPlayer
       switch (obj.myShape)
       {
           case Shape.Sphere:
-              rand.x = Random.Range(0f, 0.5f);
+              rand.x = Random.Range(0f, 0.2f);
               rand.y = Random.Range(0f, 0.5f);
               break;
           case Shape.Cube:
-              rand.x = Random.Range(0f, 0.2f);
+              rand.x = Random.Range(0f, 0.01f);
               rand.y = Random.Range(0f, 0.2f);
               break;
           case Shape.Pyramid:
-              rand.x = Random.Range(0f, 1f);
+              rand.x = Random.Range(0f, 0.5f);
               rand.y = Random.Range(0f, 1f);
               break;
       }
