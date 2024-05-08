@@ -37,6 +37,8 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         StartCoroutine(ExperienceTimer(timer));
+
+        spawner.maxObjs = 0;
         StartCoroutine(BeginStage(timer));
     }
 
@@ -71,12 +73,14 @@ public class GameController : MonoBehaviour
         //wait for remaining time
 
         //Should be generic enough to work for each stage and varying array sizes.....
+
+        delay /= experienceStages.Length;
         foreach (DifficultyStage stage in experienceStages)
         {
             currentStage = stage;
 
             delay /= stage.mainShapes.Length;
-            spawner.maxObjs = stage.mainShapes.Length + 1;
+            spawner.maxObjs += stage.mainShapes.Length + 1;
 
             foreach (ShapeBase shape in stage.mainShapes)
             {
