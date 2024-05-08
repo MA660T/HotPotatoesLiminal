@@ -29,9 +29,6 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        if(testMode)
-            StartCoroutine(HackSpawnObject(2f));
-        
         position = transform.position;
     }
     
@@ -56,29 +53,4 @@ public class Spawner : MonoBehaviour
             spawnedObjs++;
         }
     }
-
-    //HACK: Spawn random
-    #region HACK SPAWN
-    
-    [Header("AUTOMATIC SPAWNING FOR TESTING ONLY")]
-    [Tooltip("Check box for random spawns")]
-    public bool testMode;
-    [Tooltip("Max number of objects, ONLY FOR TEST MODE")]
-    public int maxObjects = 3;
-    
-    private int hackSpawns = 0;
-
-    IEnumerator HackSpawnObject(float delay)
-    {
-        while (hackSpawns < maxObjects)
-        {
-            Instantiate(shapes[Random.Range(0, 3)],
-                new Vector3(position.x + Random.Range(lowerSpawnXLimit, upperSpawnXLimit), position.y, position.z + Random.Range(lowerSpawnXLimit, upperSpawnXLimit)),
-                Quaternion.identity);
-            hackSpawns++;
-            
-            yield return new WaitForSeconds(delay);
-        }
-    }
-    #endregion
 }

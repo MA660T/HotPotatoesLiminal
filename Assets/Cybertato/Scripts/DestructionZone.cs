@@ -23,12 +23,12 @@ public class DestructionZone : MonoBehaviour
 
         if (shape != null)
         {
-            spawner.SpawnGivenObject(shape);
             aud.Play();
             Destroy(other.gameObject);
             spawner.spawnedObjs --;
             
             gm.ResetCombo();
+            spawner.SpawnGivenObject(shape);
         }
     }
 }
