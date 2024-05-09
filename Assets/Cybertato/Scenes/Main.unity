@@ -5867,7 +5867,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 1676988090}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &272390520
 CapsuleCollider:
@@ -14443,8 +14443,8 @@ Transform:
   - {fileID: 2112550169}
   - {fileID: 1858539806}
   - {fileID: 1445691399}
-  - {fileID: 4648121555079210887}
   - {fileID: 272390519}
+  - {fileID: 4648121555079210887}
   - {fileID: 1735966189}
   - {fileID: 959317481}
   m_Father: {fileID: 0}
@@ -16363,7 +16363,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shapes.Array.data[1]
       value: 
-      objectReference: {fileID: 3459019304130851366, guid: 77827aa294e331f489e701668598e1e2,
+      objectReference: {fileID: 1291334216174583633, guid: 77827aa294e331f489e701668598e1e2,
         type: 3}
     - target: {fileID: 6568617349453789699, guid: 92d5e6f506dbdee45af139e0f71c977a,
         type: 3}
@@ -16374,7 +16374,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shapes.Array.data[2]
       value: 
-      objectReference: {fileID: 1566396860294184418, guid: 4fa284aeb472f0e4385b8d1be041ed02,
+      objectReference: {fileID: 1373927899745172144, guid: 4fa284aeb472f0e4385b8d1be041ed02,
         type: 3}
     - target: {fileID: 6568617349453789699, guid: 92d5e6f506dbdee45af139e0f71c977a,
         type: 3}
