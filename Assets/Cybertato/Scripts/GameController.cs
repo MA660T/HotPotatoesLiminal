@@ -23,9 +23,11 @@ public class GameController : MonoBehaviour
     public int score { get; private set; }
     public int scoreMultiplier { get; private set; }
     private int comboCounter;
+    private int maxCombo;
 
     [Header("SETUP VARIABLES")]
     public Spawner spawner;
+    public ScoreRead scoreRead;
     
     [Header("ADJUSTABLE VARIABLES")]
     [Tooltip("Length of time the experience will go for")]
@@ -54,6 +56,9 @@ public class GameController : MonoBehaviour
         
         if(score >= currentStage.bonusScore)
             spawner.SpawnGivenObject(currentStage.bonusShape);
+
+        if (comboCounter > maxCombo)
+            maxCombo = comboCounter;
     }
 
     public void ResetCombo()
@@ -94,8 +99,14 @@ public class GameController : MonoBehaviour
     
     private IEnumerator ExperienceTimer(float delay)
     {
-        
         yield return new WaitForSeconds(delay);
+        
+        //Stop spawner
+        //Show final score read
+        spawner.maxObjs = 0;
+        scoreRead.ShowScore(score, maxCombo);
+        yield return new WaitForSeconds(15f);
+        
         GoodWayToEnd();
     
     }
